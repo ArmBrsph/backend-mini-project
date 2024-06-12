@@ -14,6 +14,10 @@ exports.createApiDocs = async (app) => {
         ],
         servers: [
             {
+                url: process.env.URL_SERVER,
+                description: 'Server'
+            },
+            {
                 url: `http://localhost:5100`,
                 description: 'Local development server'
             },

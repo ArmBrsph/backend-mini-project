@@ -2,6 +2,7 @@ const express = require('express');
 const bodyparser = require('body-parser');
 const cors = require('cors');
 const { createApiDocs } = require('./src/config/swagger');
+require('dotenv').config();
 
 const app = express();
 app.use(bodyparser.urlencoded({ extended: true, limit: '50mb' }));;
@@ -10,6 +11,6 @@ createApiDocs(app)
 
 app.use('/api', require('./src/api/Router'))
 
-app.listen(5100, () => {
-    console.log(`Server is running port ${5100}`)
+app.listen(process.env.PORT, () => {
+    console.log(`Server is running port ${process.env.PORT}`)
 });
