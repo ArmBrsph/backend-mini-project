@@ -10,8 +10,11 @@ app.use(bodyparser.json({ limit: '50mb' }));
 const whitelist = [
     'http://localhost:5100',
     'http://54.179.41.122',
+    'http://54.179.41.122:5100',
+    'http://54.179.41.122:8443',
     'https://studiookc.com',
     'https://studiookc.com:5100',
+    'https://studiookc.com:8443',
     undefined,
     null
 ]
