@@ -2,12 +2,12 @@ const route = require('express')['Router']()
 const Controller = require('./Controller');
 /**
 * @swagger
-* /api/getAllProduct:
+* /shop/getAllProduct:
 *   get:
 *     summary: Get a all Product Data.
 *     description: Retrieve a Data based on the specified criteria.
 *     tags: 
-*       - api
+*       - shop
 *     responses:
 *       200:
 *         description: Successful response.
@@ -19,12 +19,12 @@ route.get('/getAllProduct',
 )
 /**
 * @swagger
-* /api/getDetailProduct:
+* /shop/getDetailProduct:
 *   get:
 *     summary: Get a all Product Data.
 *     description: Retrieve a Data based on the specified criteria.
 *     tags: 
-*       - api
+*       - shop
 *     parameters:
 *       - in: query
 *         name: id
@@ -41,12 +41,12 @@ route.get('/getDetailProduct',
 )
 /**
 * @swagger
-* /api/billProduct:
+* /shop/billProduct:
 *   post:
 *     summary: update a pfa status job
 *     description: Endpoint to update a pfa status job with the specified details.
 *     tags:
-*       - api
+*       - shop
 *     requestBody:
 *       required: true
 *       content:

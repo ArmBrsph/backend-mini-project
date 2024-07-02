@@ -44,7 +44,7 @@ exports.createApiDocs = async (app) => {
     const options = {
         swaggerDefinition,
         // Paths to files containing OpenAPI definitions
-        apis: [path.resolve(__dirname, '../api/*.js')]
+        apis: [path.resolve(__dirname, '../shop/*.js')]
     };
     const swaggerDocument = swaggerJSDoc(options);
     app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));

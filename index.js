@@ -35,7 +35,7 @@ const corsOption = {
 }
 
 app.use(cors(corsOption));
-app.use('/api', require('./src/api/Router'))
+app.use('/shop', require('./src/shop/Router'))
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running port ${process.env.PORT}`)
